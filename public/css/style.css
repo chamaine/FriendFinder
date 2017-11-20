@@ -1,0 +1,69 @@
+body {
+  background-image: none;
+}
+
+form,label,input, button,select {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+
+  margin: 10px;
+  padding: 4px;
+
+}
+
+label {
+  font-size : 20px;
+}
+
+/**
+ * Modal Window Section
+ */
+#modalWindow {
+
+  top: 0px;
+  left: 0px;
+
+  position: fixed;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  margin:0px;
+  padding: 10px;
+
+
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+
+  font-size: 16px;
+
+  display: none;
+
+
+
+}
+
+/**
+ * Close Button
+ */
+#closeModalImg {
+
+  width: 60px;
+
+    position:fixed;
+    top: 20px;
+    /* calc image width + 20px pdding from edge */
+    left: calc(100% - 80px);
+
+    border-radius: 16px;
+
+}
+
+
+#closeModalImg:hover,
+#closeModalImg:focus {
+    background-color: #fff;
+    /*text-decoration: none;*/
+    cursor: pointer;
+}
