@@ -3,8 +3,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-
-
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -17,8 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //Routes
-require("./routing/htmlRoutes");
-require("./routing/apiRoutes");
+require("./routing/htmlRoutes")(app);
+require("./routing/apiRoutes")(app);
 
   // Log (server-side) when our server has started
 app.listen(PORT, function() {

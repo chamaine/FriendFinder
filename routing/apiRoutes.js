@@ -3,7 +3,7 @@
  */
 
 // Get access to the friends array stored in an external file
-var friends = require("../data/friends.js");
+var friends = require("../app/data/friends");
 
 // Utility function to check compatibility
 // Returns the best matched friend entry
