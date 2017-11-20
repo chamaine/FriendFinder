@@ -2,8 +2,7 @@
 //What I need to get this server working(dependicies)//
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
-var fs = require("fs");
+
 
 
 // Sets up the Express App

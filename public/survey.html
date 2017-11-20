@@ -1,41 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-      <meta charset="utf-8">
-      <title> Find Your Match! </title>
-
- <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-      <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-      <link rel="stylesheet" type="text/css" href="./assets/css/survey.css">
-
-  </head>
-
-  <body>
-    <div id="modalWindow">
-
-      <div >
-        <h1>We found your match!</h1>
-
-        <p>Your match's name is: <span id="matchName">name-here</span> , and has a Compatability Delta &trade; of <span id="matchDelta">delta</span></p>
-
-        <h3>Profile Photo</h3>
-        <img id="matchPhoto" src = "" alt="Math Profile Photo">
-
-
-
-        <img id="closeModalImg" src="./assets/images/close_icon.png" >
-      </div>
-
-
-    </div>
-
-   <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
     <title>Survey</title>
@@ -135,17 +98,17 @@
                     <option value="5">5 (Strongly disagree)</option>
                 </select>
                  <h3>Question 8</h3>
-                <h4>In a relationship only mate can have a tummy and it's you.</h4>
-                <select data-placeholder="" class="chosen-select" id="q3" required>
+                <h4>You believe only one mate can have a small tummy in a relationship and it's you.</h4>
+                <select data-placeholder="" class="chosen-select" id="q1" required>
                     <option value="">Select an option</option>
                     <option value="1">1 (Strongly agree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 (Strongly disagree)</option
+                    <option value="5">5 (Strongly disagree)</option>
                 </select>
                 <h3>Question 9</h3>
-                <h4>You prefer the beaches in Europe to the beaches in the Caribean</h4>
+                <h4>You prefer the beaches in Europe to the beaches in the Caribbean</h4>
                 <select data-placeholder="" class="chosen-select" id="q2" required>
                     <option value="">Select an option</option>
                     <option value="1">1 (Strongly agree)</option>
@@ -192,7 +155,7 @@
         </div>
         <hr>
         <div>
-            <a href="/api/friends" target="blank">API Friends List</a> | <a href="https://github.com/nchandika1/FriendFinder" target="blank">Git Hub Repo</a>
+            <a href="/api/friends" target="blank">API Friends List</a> | <a href="https://github.com/chamaine/FriendFinder" target="blank">Git Hub Repo</a>
         </div>
     </div>
 <script type="text/javascript">
@@ -204,6 +167,11 @@
         $("#q3").val('');
         $("#q4").val('');
         $("#q5").val('');
+        $("#q6").val('');
+        $("#q7").val('');
+        $("#q8").val('');
+        $("#q9").val('');
+        $("#q10").val('');
     }
     $("#submit").on("click", function() {
         // Make sure the form fields are filled completely
@@ -213,7 +181,12 @@
             ($("#q2").val() === "") ||
             ($("#q3").val() === "") ||
             ($("#q4").val() === "") ||
-            ($("#q5").val() === "") ) {
+            ($("#q5").val() === "") ||
+            ($("#q6").val() === "") ||
+            ($("#q7").val() === "") ||
+            ($("#q8").val() === "") ||
+            ($("#q9").val() === "") ||
+            ($("#q10").val() === "") ) {
                 alert("Please fill out all the fields.");
                 $("#test").hide();
                 return;     
@@ -222,7 +195,8 @@
         var userData = {
                 name: $("#name").val(),
                 photo: $("#photo").val(),
-                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val()]
+                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(),$("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(),
+                    $("#q9").val(), $("#q10").val()]
             }
         
         // Send POST AJAC call to the server
